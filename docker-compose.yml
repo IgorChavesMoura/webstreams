@@ -1,0 +1,19 @@
+services:
+  webstreams-server:
+    build: 
+      dockerfile: server.Dockerfile
+    container_name: webstreams-server
+    ports:
+      - 3000:3000
+  webstreams-image:
+    build: 
+      dockerfile: image.Dockerfile
+    container_name: webstreams-image
+    ports:
+      - 3001:3001
+  webstreams-app:
+    build: 
+      dockerfile: app.Dockerfile
+    container_name: webstreams-app
+    ports:
+      - 8080:80
